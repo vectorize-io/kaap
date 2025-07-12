@@ -51,7 +51,7 @@
         <spotbugs.version>4.7.2</spotbugs.version>
         <maven-checkstyle-plugin.version>3.2.1</maven-checkstyle-plugin.version>
         <commons-codec.version>1.15</commons-codec.version>
-        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <jjwt.version>0.11.5</jjwt.version>
         <jackson.version>2.13.4</jackson.version>
         <sundrio.version>0.93.2</sundrio.version>
