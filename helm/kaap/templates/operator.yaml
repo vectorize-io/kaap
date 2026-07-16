@@ -48,6 +48,15 @@ spec:
         {{- include "kaap.selectorLabels" . | nindent 8 }}
       namespace: {{ .Release.Namespace }}
     spec:
+      {{- $nodeSelector := coalesce .Values.operator.nodeSelector .Values.nodeSelector -}}
+      {{- if $nodeSelector }}
+      nodeSelector:
+{{ toYaml $nodeSelector | indent 8 }}
+      {{- end }}
+      {{- if .Values.operator.tolerations }}
+      tolerations:
+{{ toYaml .Values.operator.tolerations | indent 8 }}
+      {{- end }}
       containers:
         - env:
             - name: KUBERNETES_NAMESPACE
